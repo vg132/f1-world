@@ -1,0 +1,73 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="GENERATOR" content="Microsoft FrontPage 3.0">
+<title>Select Your Driver</title>
+</head>
+
+<body background="images/stucco.gif" bgcolor="#FFFFFF" text="#FFFFFF">
+<script language="JavaScript"><!--
+
+function setCookie (name, value, expires) 
+{ 
+if (!expires) expires = new Date();
+document.cookie = name + "=" + escape (value) +
+"; expires=" + expires.toGMTString() +  "; path=/"; 
+}
+
+function setValue()
+{
+var expdate = new Date ();
+var test;
+expdate.setTime (expdate.getTime() + (1000 * 60 * 60 * 24 * 700)); 
+test=document.form1.list.selectedIndex+1;
+setCookie ("f1", test, expdate);
+GoBack(this.form);
+}
+
+function GoBack()
+{
+history.back()
+}
+
+
+
+// --></script>
+
+
+<form name="form1">
+  <p><select name="list" size="1">
+    <option value="1">Mika Hakkinen</option>
+    <option value="2">David Coulthard</option>
+    <option value="3">Michael Schumacher</option>
+    <option value="4">Eddie Irvine</option>
+    <option value="5">Alex Zanardi</option>
+    <option value="6">Ralf Schumacher</option>
+    <option value="7">Damon Hill</option>
+    <option value="8">H-H Frentzen</option>
+    <option value="9">Giancarlo Fisichella</option>
+    <option value="10">Alexander Wurz</option>
+    <option value="11">Jean Alesi</option>
+    <option value="12">Pedro Diniz</option>
+    <option value="13">Rubens Barrichello</option>
+    <option value="14">Johnny Herbert</option>
+    <option value="15">Jacques Villeneuve</option>
+    <option value="16">Ricardo Zonta</option>
+    <option value="17">Olivier Panis</option>
+    <option value="18">Jarno Trulli</option>
+    <option value="19">Pedro de la Rosa</option>
+    <option value="20">Toranosuke Takagi</option>
+    <option value="21">Luca Badoer</option>
+    <option value="22">Marc Gene</option>
+  </select> <input type="button" value="Select" onclick="setValue()"></p>
+</form>
+
+<p><font size="2" face="Arial">Select your fa</font><font size="2">u</font><font size="2"
+face="Arial">vorit</font><font size="2">e</font><font size="2" face="Arial"> driver in the
+1999 Formula One World Championship. After you have selected a driver you will be
+presented with the latest information about your selected driver every time you come to
+this page (the main page).<br>
+(</font><font size="2"><!--#exec cgi="/cgi-bin/counter"--></font>)</p>
+</body>
+</html>
